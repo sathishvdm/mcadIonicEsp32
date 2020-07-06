@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Main Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <h1>{{ datasfromble }}</h1>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Device1</ion-label>
+      <ion-toggle [(ngModel)]="device1" color="secondary"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Device2</ion-label>
+      <ion-toggle [(ngModel)]="device2" color="tertiary"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-range min="0" max="5" step="1" snaps="true" pin="true" color="secondary">
+        <ion-label slot="start">0</ion-label>
+        <ion-label slot="end">5</ion-label>
+        <!-- <ion-icon size="small" slot="start" name="timer-outline"></ion-icon> -->
+        <ion-icon slot="end" name="timer-outline"></ion-icon>
+      </ion-range>
+    </ion-item>
+    <ion-item>
+      <ion-range min="0" max="5" step="1" snaps="true" pin="true" color="tertiary">
+        <ion-label slot="start">0</ion-label>
+        <ion-label slot="end">5</ion-label>
+        <!-- <ion-icon size="small" slot="start" name="timer-outline"></ion-icon> -->
+        <ion-icon slot="end" name="timer-outline"></ion-icon>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p>{{ statusMessage }}</p>
+  </ion-toolbar>
+</ion-footer>
